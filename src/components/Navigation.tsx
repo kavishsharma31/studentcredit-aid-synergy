@@ -2,11 +2,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +17,18 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleNavigation = (href: string) => {
     setIsMobileMenuOpen(false);
+    if (location.pathname === "/") {
+      // If we're on the home page, scroll to the section
+      const element = document.getElementById(href.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're on another page, navigate to home and then scroll
+      window.location.href = href;
+    }
   };
 
   const navLinks = [
@@ -48,7 +55,7 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <button
                 key={link.name}
-                onClick={() => scrollToSection(link.href.slice(1))}
+                onClick={() => handleNavigation(link.href)}
                 className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
               >
                 {link.name}
@@ -80,7 +87,7 @@ const Navigation = () => {
               {navLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={() => scrollToSection(link.href.slice(1))}
+                  onClick={() => handleNavigation(link.href)}
                   className="block w-full text-left px-3 py-2 text-base font-medium text-gray-600 hover:text-primary transition-colors"
                 >
                   {link.name}
