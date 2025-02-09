@@ -59,9 +59,11 @@ const Navigation = () => {
                 {link.name}
               </button>
             ))}
-            <Button variant="outline" className="mr-2">
-              Partner with Us
-            </Button>
+            <Link to="/partner-with-us">
+              <Button variant="outline" className="mr-2">
+                Partner with Us
+              </Button>
+            </Link>
             <Link to="/check-eligibility">
               <Button>Check Eligibility</Button>
             </Link>
@@ -94,9 +96,11 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="space-y-2 pt-2">
-                <Button variant="outline" className="w-full">
-                  Partner with Us
-                </Button>
+                <Link to="/partner-with-us" className="block w-full">
+                  <Button variant="outline" className="w-full">
+                    Partner with Us
+                  </Button>
+                </Link>
                 <Link to="/check-eligibility" className="block w-full">
                   <Button className="w-full">Check Eligibility</Button>
                 </Link>
