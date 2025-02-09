@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           {/* Image/Illustration */}
-          <div className="relative hidden md:block pt-16">
+          <div className="relative hidden md:block pt-24">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-100/50 to-transparent rounded-full filter blur-3xl" />
             <img
               src="/lovable-uploads/517c8fc9-8803-4267-b4d9-06b8c54ef03e.png"
