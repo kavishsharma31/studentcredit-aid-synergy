@@ -19,13 +19,13 @@ const Navigation = () => {
 
   const handleNavigation = (href: string) => {
     setIsMobileMenuOpen(false);
-    if (location.pathname === "/") {
+    if (location.pathname === "/" && href.startsWith("#")) {
       const element = document.getElementById(href.slice(1));
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      window.location.href = href;
+      window.location.href = href.startsWith("#") ? "/" + href : href;
     }
   };
 
@@ -33,7 +33,7 @@ const Navigation = () => {
     { name: "How It Works", href: "#how-it-works" },
     { name: "Features", href: "#features" },
     { name: "Testimonials", href: "#testimonials" },
-    { name: "FAQ", href: "#faq" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   return (
