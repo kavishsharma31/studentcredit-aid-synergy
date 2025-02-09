@@ -1,6 +1,5 @@
 
 import { Brain, ChartBar, CreditCard, User } from "lucide-react";
-import Navigation from "@/components/Navigation";
 
 const HowItWorks = () => {
   const steps = [
@@ -30,13 +29,12 @@ const HowItWorks = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-blue-50">
-      <Navigation />
-      <div className="container mx-auto px-4 pt-24 pb-16">
+    <section className="bg-gradient-to-b from-white to-blue-50 section-padding">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             How CreditAI Works
-          </h1>
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI-powered platform revolutionizes student credit assessment,
             making loans accessible without traditional requirements.
@@ -61,7 +59,7 @@ const HowItWorks = () => {
           ))}
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 
