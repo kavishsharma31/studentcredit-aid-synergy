@@ -20,13 +20,11 @@ const Navigation = () => {
   const handleNavigation = (href: string) => {
     setIsMobileMenuOpen(false);
     if (location.pathname === "/") {
-      // If we're on the home page, scroll to the section
       const element = document.getElementById(href.slice(1));
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // If we're on another page, navigate to home and then scroll
       window.location.href = href;
     }
   };
