@@ -42,9 +42,9 @@ const Hero = () => {
           <div className="relative hidden md:block">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-100/50 to-transparent rounded-full filter blur-3xl" />
             <img
-              src="/placeholder.svg"
-              alt="Student using app"
-              className="w-full h-auto relative z-10"
+              src="/lovable-uploads/517c8fc9-8803-4267-b4d9-06b8c54ef03e.png"
+              alt="A graduate student in cap and gown holding their diploma"
+              className="w-full h-auto relative z-10 rounded-lg shadow-xl"
             />
           </div>
         </div>
