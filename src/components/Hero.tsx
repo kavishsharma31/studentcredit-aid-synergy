@@ -35,9 +35,11 @@ const Hero = () => {
                   Check Eligibility
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="text-lg">
-                Partner with Us
-              </Button>
+              <Link to="/partner-with-us">
+                <Button size="lg" variant="outline" className="text-lg">
+                  Partner with Us
+                </Button>
+              </Link>
             </div>
           </div>
 
