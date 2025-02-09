@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -29,9 +30,11 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="text-lg">
-                Check Your Credit Score
-              </Button>
+              <Link to="/check-eligibility">
+                <Button size="lg" className="text-lg">
+                  Check Eligibility
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="text-lg">
                 Partner with Us
               </Button>
