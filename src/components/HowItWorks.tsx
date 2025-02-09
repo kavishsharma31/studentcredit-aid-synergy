@@ -29,9 +29,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-blue-50 section-padding">
+    <section className="bg-gradient-to-b from-white to-blue-50 py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             How CreditAI Works
           </h2>
@@ -42,21 +42,23 @@ const HowItWorks = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {steps.map((step, index) => (
-            <div
-              key={step.title}
-              className="glass p-6 flex flex-col items-center text-center group hover:scale-105 transition-transform duration-300 fade-in"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <step.icon className="h-8 w-8 text-primary" />
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            return (
+              <div
+                key={step.title}
+                className="glass p-6 flex flex-col items-center text-center group hover:scale-105 transition-transform duration-300"
+              >
+                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600">{step.description}</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {step.title}
-              </h3>
-              <p className="text-gray-600">{step.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
