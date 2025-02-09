@@ -62,7 +62,9 @@ const Navigation = () => {
             <Button variant="outline" className="mr-2">
               Partner with Us
             </Button>
-            <Button>Check Eligibility</Button>
+            <Link to="/check-eligibility">
+              <Button>Check Eligibility</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,7 +97,9 @@ const Navigation = () => {
                 <Button variant="outline" className="w-full">
                   Partner with Us
                 </Button>
-                <Button className="w-full">Check Eligibility</Button>
+                <Link to="/check-eligibility" className="block w-full">
+                  <Button className="w-full">Check Eligibility</Button>
+                </Link>
               </div>
             </div>
           </div>
