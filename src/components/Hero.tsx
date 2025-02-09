@@ -36,21 +36,6 @@ const Hero = () => {
                 Partner with Us
               </Button>
             </div>
-            
-            <div className="pt-8 flex items-center gap-8">
-              <div>
-                <p className="text-3xl font-bold text-primary">96%</p>
-                <p className="text-sm text-gray-600">Approval Rate</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-primary">24h</p>
-                <p className="text-sm text-gray-600">Fast Processing</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-primary">50k+</p>
-                <p className="text-sm text-gray-600">Students Helped</p>
-              </div>
-            </div>
           </div>
 
           {/* Image/Illustration */}
